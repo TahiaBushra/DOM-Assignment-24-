@@ -7,7 +7,7 @@
     <title>Assignment-24</title>
 </head>
 <style>
-    .model {
+    /* .model {
         position: fixed;
         left: 50%;
         top: 50%;
@@ -22,6 +22,47 @@
 
     .hidden {
         display: none;
+    } */
+    .theme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        scale: 1.1
+    }
+
+    .light_theme {
+        background-color: #ffffff;
+        color: #333333;
+        border: 1px solid black;
+    }
+
+
+    .dark_theme {
+        background-color: #333333;
+        color: #ffffff;
+        border: 1px solid white;
+    }
+
+    body {
+        background-color: aliceblue;
     }
 </style>
 
@@ -31,8 +72,12 @@
         <h1>This is a model</h1>
         <button class="btn_close_model">Close Model</button>
     </div> -->
-    <div class="outer">
+    <!-- <div class="outer">
         <div class="inner"><button>Click Me</button></div>
+    </div> -->
+    <div class="theme">
+        <button class="light_theme">Light</button>
+        <button class="dark_theme">Dark</button>
     </div>
     <script src="./app.js"></script>
 </body>

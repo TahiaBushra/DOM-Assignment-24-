@@ -34,12 +34,34 @@
 //     }
 // });
 
-// Event Propagation: Event Bubling + Event Deligation = Event Propagation
-const outer = document.querySelector(".outer");
-const inner = document.querySelector(".inner");
-outer.addEventListener("click", () => {
-    console.log("Outer Div");
+// // Event Propagation: Event Bubling + Event Deligation = Event Propagation.
+// const outer = document.querySelector(".outer");
+// const inner = document.querySelector(".inner");
+// outer.addEventListener("click", () => {
+//     console.log("Outer Div");
+// })
+// inner.addEventListener("click", () => {
+//     console.log("Inner div");
+// });
+
+// Theme
+// const btnLight = document.querySelector(".light_theme");
+// btnLight.addEventListener("click", () => {
+//     document.body.style.backgroundColor = "white";
+// });
+
+// const btnDark = document.querySelector(".dark_theme");
+// btnDark.addEventListener("click", () => {
+//     document.body.style.backgroundColor = "black";
+// });
+
+const theme = document.querySelector(".theme");
+
+theme.addEventListener("click", (event) => {
+    if (event.target.classList.contains("light_theme")) {
+        document.body.style.backgroundColor = "white";
+    }
+    if (event.target.classList.contains("dark_theme")) {
+        document.body.style.backgroundColor = "black";
+    }
 })
-inner.addEventListener("click", () => {
-    console.log("Inner div");
-});
