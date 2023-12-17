@@ -33,3 +33,13 @@
 //         closeModel();
 //     }
 // });
+
+// Event Propagation: Event Bubling + Event Deligation = Event Propagation
+const outer = document.querySelector(".outer");
+const inner = document.querySelector(".inner");
+outer.addEventListener("click", () => {
+    console.log("Outer Div");
+})
+inner.addEventListener("click", () => {
+    console.log("Inner div");
+});
