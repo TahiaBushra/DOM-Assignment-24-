@@ -55,13 +55,53 @@
 //     document.body.style.backgroundColor = "black";
 // });
 
-const theme = document.querySelector(".theme");
+// const theme = document.querySelector(".theme");
 
-theme.addEventListener("click", (event) => {
-    if (event.target.classList.contains("light_theme")) {
-        document.body.style.backgroundColor = "white";
+// theme.addEventListener("click", (event) => {
+//     if (event.target.classList.contains("light_theme")) {
+//         document.body.style.backgroundColor = "white";
+//     }
+//     if (event.target.classList.contains("dark_theme")) {
+//         document.body.style.backgroundColor = "black";
+//     }
+// })
+
+// To-Do List
+const todoInput = document.querySelector(".todo-input");
+const addButton = document.querySelector(".add-button");
+const todoList = document.querySelector(".todo-list");
+
+function createTodoItem(task) {
+    const li = document.createElement("li");
+    li.textContent = task;
+    todoList.appendChild(li);
+}
+
+addButton.addEventListener("click", addTask);
+
+function addTask() {
+    const task = todoInput.value.trim();
+    if (task !== "") {
+        createTodoItem(task);
+        todoInput.value = "";
+    } else {
+        alert("Please enter a task!");
     }
-    if (event.target.classList.contains("dark_theme")) {
-        document.body.style.backgroundColor = "black";
+}
+
+todoList.addEventListener("click", removeTask);
+
+function removeTask(event) {
+    if (event.target.tagName === "LI") {
+        event.target.remove();
     }
-})
+}
+
+todoInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
+
+
+

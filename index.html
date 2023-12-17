@@ -23,7 +23,7 @@
     .hidden {
         display: none;
     } */
-    .theme {
+    /* .theme {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -63,6 +63,71 @@
 
     body {
         background-color: aliceblue;
+    } */
+    .todo-app {
+        max-width: 500px;
+        margin: 25px auto;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.5);
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .todo-head {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .todo-input {
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .add-button {
+        padding: 8px 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #303579c5;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .add-button:hover {
+        background-color: #2797b3d8;
+    }
+
+    .todo-list {
+        list-style: decimal;
+        padding: 0;
+    }
+
+    .todo-list li {
+        margin-bottom: 8px;
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .todo-list li:hover {
+        background-color: #f0f0f0;
+        scale: 1.025;
     }
 </style>
 
@@ -75,9 +140,15 @@
     <!-- <div class="outer">
         <div class="inner"><button>Click Me</button></div>
     </div> -->
-    <div class="theme">
+    <!-- <div class="theme">
         <button class="light_theme">Light</button>
         <button class="dark_theme">Dark</button>
+    </div> -->
+    <div class="todo-app">
+        <h1 class="todo-head">To-Do List</h1>
+        <input type="text" class="todo-input" placeholder="Add a new task">
+        <button class="add-button">Add</button>
+        <ul class="todo-list"></ul>
     </div>
     <script src="./app.js"></script>
 </body>
