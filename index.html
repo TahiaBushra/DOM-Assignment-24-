@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-24</title>
+</head>
+<style>
+    .model {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+    <button class="btn_open_model">Open Model</button>
+    <div class="model hidden">
+        <h1>This is a model</h1>
+        <button class="btn_close_model">Close Model</button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
